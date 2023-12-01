@@ -1,0 +1,244 @@
+/* unsplash (used to download good quality images) */
+
+/* 
+Font-weight
+default:400px;
+
+
+line height:
+default:1;
+
+
+
+colors: #112417    buttons color:#b8651b;  #d5e99d;
+primary:#e67e22   #D6B084ff;  #FCC133ff    #96c80aff   #F5B116ff;
+primary:#1ad526
+Tints: #fdf2e9
+shades:
+Accents:
+grey: 
+
+shadows: 
+whitespace
+border-radius:*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+  /* outline: 6px dotted #043e11;
+  outline-offset: 8px; */
+  box-shadow: 0 0 0 0.3rem #043e11;
+}
+
+html {
+  /* font-size: 10px; */
+  /* 62.5%; this  is the percentage of users font-size settings */
+  font-size: 62.5%;
+  overflow-x: hidden;
+
+  /* does not work on safari
+  scroll-behavior: smooth; */
+}
+
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-family: "Rubik", sans-serif;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  color: #555;
+  overflow-x: hidden;
+}
+
+/***********************************************
+GENERAL REUSABLE COMPONENTS 
+********************************************** */
+.container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+
+  /* background-color: #1ad526; */
+}
+
+.grid {
+  display: grid;
+  row-gap: 9.6rem;
+  column-gap: 6.4rem;
+}
+
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
+
+.grid2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.center-grid {
+  align-items: center;
+}
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  font-weight: 700;
+  color: #333;
+  letter-spacing: -0.5px;
+}
+
+.heading-primary {
+  font-size: 5.2rem;
+  line-height: 1.05;
+  margin-bottom: 3.2rem;
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+
+.heading-tertiary {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+
+.subheading {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #b8651b;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.75px;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  font-weight: 600;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 2rem;
+  padding: 1.6rem 3rem;
+  border-radius: 1.5rem;
+
+  /*only nececessary for .btn*/
+  border: none;
+  cursor: pointer;
+
+  /* always put the transition property in the original state or the parent element */
+  transition: all 0.3s;
+}
+
+.btn-full:link,
+.btn-full:visited {
+  background-color: #e67e22;
+  color: #fff;
+}
+
+.btn-full:hover,
+.btn-full:active {
+  background-color: #b8651b;
+}
+
+.btn-outline:link,
+.btn-outline:visited {
+  background-color: #fff;
+  color: #000;
+}
+
+.btn-outline:hover,
+.btn-outline:active {
+  background-color: #d5e99d;
+  color: #3c5004;
+
+  /* this trick makes use of shadow to add borders inside a box */
+  box-shadow: inset 0 0 0 2px #b8651b;
+}
+
+.btn--form {
+  background-color: #000;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem;
+}
+
+.btn--form:hover,
+.btn--form:active {
+  background-color: #333;
+  /* color: #000; */
+}
+
+.link:link,
+.link:visited {
+  display: inline-block;
+  color: #e67e22;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 0.2rem;
+  transition: all 0.3s;
+}
+
+.link:hover,
+.link:active {
+  color: #b8651b;
+  border-bottom: 1px solid transparent;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.list-item {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  /* line-height: 1.2; */
+}
+
+.list-icon {
+  width: 3rem;
+  height: 3rem;
+  color: #e67e22;
+}
+
+/*HELPER/SETTINGS CLASSES*/
+.margin-right {
+  margin-right: 1.6rem;
+}
+
+.margin-bottom {
+  margin-bottom: 4.8rem !important;
+}
+
+.center-text {
+  text-align: center;
+}
+
+strong {
+  font-weight: 600;
+}
